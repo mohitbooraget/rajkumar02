@@ -22,28 +22,28 @@ import re
 import os
 
 bot = Client("bot",
-             bot_token= "7034221624:AAFElD8zRjrkBjiwqOp8c9cfeTNhIGfWA7E",
-             api_id= 29611384,
-             api_hash= "3090026bd04c23797e0c6ca1d563b5ec")
-ADMINS = [6585878012,-1002122540539]
+             bot_token= "6810536739:AAFSNo4zDzYxW-N6PNdWLY-LqgJuAp3cCvI",
+             api_id= 23291931,
+             api_hash= "4b11dd648188731fb7c9bc8083e8791c")
+ADMINS = [6436809802,5186250641,6594402123,-1002122540539]
 
 @bot.on_message(filters.command(["start"]) )
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text(f"**Hi 👋 Sir.. How are you ?**\n**Bot Made BY 💪 महाबली 🚩**")
+    editable = await m.reply_text(f"**Hi 👋 Sir.. How are you ?**\n**Bot Made BY 💪 𝐌𝐞𝐧𝐝𝐚𝐱™❤️ 🚩**")
 
 @bot.on_message(filters.command(["stop"]) )
 async def restart_handler(_, m):
     await m.reply_text("**BATCH SUCCESSFULLY STOPPED**🛑", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
-@bot.on_message(filters.command(["AJ"]) )
+@bot.on_message(filters.command(["chalu"]) )
 async def txt_handler(bot: Client, m: Message):
     editable = await m.reply_text(f"**🔹Hi I am Powerful TXT Downloader📥 Bot.**\n🔹**Send me the TXT file and wait.**")
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
     file_name, ext = os.path.splitext(os.path.basename(x))
-    credit = f"💪 महाबली 🚩"
+    credit = f"💪 𝐌𝐞𝐧𝐝𝐚𝐱™❤️"
     try:    
         with open(x, "r") as f:
             content = f.read()
@@ -96,7 +96,7 @@ async def txt_handler(bot: Client, m: Message):
     except Exception:
             res = "UN"
     
-    await editable.edit("**Enter Your Name or send 'de' for use default.\n Eg : 💪 महाबली 🚩**")
+    await editable.edit("**Enter Your Name or send 'de' for use default.\n Eg : 𝐌𝐞𝐧𝐝𝐚𝐱™❤️**")
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
@@ -105,7 +105,7 @@ async def txt_handler(bot: Client, m: Message):
     else:
         CR = raw_text3
 
-    await editable.edit("Now send the **Thumb url**\n**Eg :** `https://telegra.ph/file/0e6ab2464c68076c42c24.jpg`\n\nor Send `no`")
+    await editable.edit("Now send the **Thumb url**\n**Eg :** `https://graph.org/file/f4d4a6e3ed00365fed281.jpg`\n\nor Send `no`")
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text
     await input6.delete(True)
@@ -157,8 +157,8 @@ async def txt_handler(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:                               
-                cc = f'** {str(count).zfill(3)}.** {name1}({res}) महाबली.mkv\n**Batch Name :** {b_name}\n\n**Extracted By ➤ {CR}**'
-                cc1 = f'** {str(count).zfill(3)}.** {name1} महाबली.pdf\n**Batch Name :** {b_name}\n\n**Extracted By ➤ {CR}**'
+                cc = f'** {str(count).zfill(3)}.** {name1}({res}) 𝙼𝚎𝚗𝚍𝚊𝚡.mkv\n**Batch Name :** {b_name}\n\n**Extracted By ➤ {CR}**'
+                cc1 = f'** {str(count).zfill(3)}.** {name1} 𝙼𝚎𝚗𝚍𝚊𝚡.pdf\n**Batch Name :** {b_name}\n\n**Extracted By ➤ {CR}**'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
@@ -183,7 +183,7 @@ async def txt_handler(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    prog = await m.reply_text(f"**DOWNLOADING 📥 :-**\n\n**Video Name ➢** {name}\n**Quality ➢** {raw_text2}\n\n** 𝐓𝐡𝐢𝐬 𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ➤ 💪 महाबली 🚩")
+                    prog = await m.reply_text(f"**DOWNLOADING 📥 :-**\n\n**Video Name ➢** {name}\n**Quality ➢** {raw_text2}\n\n** 𝐓𝐡𝐢𝐬 𝐁𝐨𝐭 𝐌𝐚𝐝𝐞 𝐁𝐲 ➤ 𝐌𝐞𝐧𝐝𝐚𝐱™❤️")
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
                     await prog.delete(True)
