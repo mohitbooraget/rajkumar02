@@ -3,7 +3,7 @@
 ### Deploy on heroku
 
 
-<a href="https://heroku.com/deploy?template=https://github.com/realstarbat/realstarbro02">
+<a href="https://heroku.com/deploy?template=https://github.com/mohitbooraget/rajkumar02">
      <img height="30px" src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku">
   </a>
 
@@ -17,7 +17,7 @@
 
 ### Credits
 
-* `Special Thanks 💪 महाबली 🚩`
+* `Special Thanks 𝐌𝐞𝐧𝐝𝐚𝐱™❤️`
 
 
 
