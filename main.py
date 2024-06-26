@@ -36,7 +36,7 @@ async def restart_handler(_, m):
     await m.reply_text("**BATCH SUCCESSFULLY STOPPED**🛑", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
-@bot.on_message(filters.command(["chalu"]) )
+@bot.on_message(filters.command(["Mdx"]) )
 async def txt_handler(bot: Client, m: Message):
     editable = await m.reply_text(f"**🔹Hi I am Powerful TXT Downloader📥 Bot.**\n🔹**Send me the TXT file and wait.**")
     input: Message = await bot.listen(editable.chat.id)
@@ -144,7 +144,7 @@ async def txt_handler(bot: Client, m: Message):
              url =  "https://d26g5bnklkwsh4.cloudfront.net/" + id + "/master.m3u8"
 
             name1 = links[i][0].replace("\t", "").replace(":", "").replace("/", "").replace("+", "").replace("#", "").replace("|", "").replace("@", "").replace("*", "").replace(".", "").replace("https", "").replace("http", "").strip()
-            name = f'{str(count).zfill(3)}) {name1[:60]}'
+            name = f'{str(count).zfill(3)})〔«𝙼𝚎𝚗𝚍𝚊𝚡»〕{name1[:60]}'
 
             if "youtu" in url:
                 ytf = f"b[height<={raw_text2}][ext=mp4]/bv[height<={raw_text2}][ext=mp4]+ba[ext=m4a]/b[ext=mp4]"
@@ -157,8 +157,8 @@ async def txt_handler(bot: Client, m: Message):
                 cmd = f'yt-dlp -f "{ytf}" "{url}" -o "{name}.mp4"'
 
             try:                               
-                cc = f'** {str(count).zfill(3)}.** {name1}({res}) 𝙼𝚎𝚗𝚍𝚊𝚡.mkv\n**Batch Name :** {b_name}\n\n**Extracted By ➤ {CR}**'
-                cc1 = f'** {str(count).zfill(3)}.** {name1} 𝙼𝚎𝚗𝚍𝚊𝚡.pdf\n**Batch Name :** {b_name}\n\n**Extracted By ➤ {CR}**'
+                cc = f'** {str(count).zfill(3)}.** {name1}({res})〔«𝙼𝚎𝚗𝚍𝚊𝚡»〕.mkv\n**Batch Name :** `{b_name}`\n\n**Extracted By ➤ {CR}**'
+                cc1 = f'** {str(count).zfill(3)}.** {name1}〔«𝙼𝚎𝚗𝚍𝚊𝚡»〕.pdf\n**Batch Name :** `{b_name}`\n\n**Extracted By ➤ {CR}**'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
